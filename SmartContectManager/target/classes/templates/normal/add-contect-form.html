@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org" th:replace="normal/base::layout(~{::section})">
+<head>
+<meta charset="UTF-8">
+<title th:text="${title}">Insert title here</title>
+</head>
+<body>
+
+<section class="change">
+
+<div class="card mt-5">
+
+<div class="card-body ">
+
+<h1 class="text-center">Add Contect</h1>
+<div class="container-fluid mt-1"> 
+<div class="row">
+<div class="col-md-10 offset-md-1">
+
+<form  action="#" th:object="${contect}"    method="post" th:action="@{/user/process-contect}" class="mt-2">
+
+<!-- Firstname -->
+<div class="input-group">
+<div class="input-group-prepend">
+<div class="input-group-text "> 
+<i class="fas fa-user-alt"></i>
+</div>
+</div>
+<input type="text" id="firstname" name="contectname" placeholder="Enter Name Here" class="form-control ">
+
+</div>
+
+
+<!-- Secondname -->
+<div class="input-group mt-3">
+<div class="input-group-prepend">
+<div class="input-group-text "> 
+<i class="fa fa-plus"></i>
+</div>
+</div>
+<input type="text" id="Secondname" name="nickname" placeholder="Enter Nick Name Here" class="form-control">
+
+</div>
+
+<!-- Phone -->
+<div class="input-group mt-3">
+<div class="input-group-prepend">
+<div class="input-group-text "> 
+<i class="fa fa-phone"></i>
+</div>
+</div>
+<input type="number" id="phone" name="phone" placeholder="Enter Phone Number Here" class="form-control">
+
+</div>
+
+
+<!-- Email -->
+<div class="input-group mt-3">
+<div class="input-group-prepend">
+<div class="input-group-text "> 
+@
+</div>
+</div>
+<input type="email" id="email" name="email" placeholder="Enter Yur Email id" class="form-control">
+
+</div>
+
+
+<!-- Work -->
+<div class="input-group mt-3">
+<div class="input-group-prepend">
+<div class="input-group-text "> 
+<i class="fa fa-briefcase"></i>
+</div>
+</div>
+<input type="text" id="work" name="work" placeholder="Enter Work Here" class="form-control">
+
+</div>
+
+
+<!-- descriptiom -->
+<div class="form-group mt-3">
+<textarea class="form-control" placeholder="Enter Description" name="description"         rows="20" cols=""></textarea>
+</div>
+
+
+
+
+
+<div class="container text-center">
+<button class="btn btn-outlinr-primary">Save</button>
+</div>
+</form>
+
+
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+
+</section>
+</body>
+</html>

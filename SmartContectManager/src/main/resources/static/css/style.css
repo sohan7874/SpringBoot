@@ -1,0 +1,133 @@
+@charset "UTF-8";
+body{
+	
+	background-color: silver;
+}
+
+.bg-primary{
+	background: #009688 !important;
+}
+
+.banner{
+	
+	width: 100%;
+	height: 93vh; 
+	background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url(../img/img1.jpg);
+	background-size:cover;
+	color: white;
+	
+}
+
+.my-card{
+	
+	
+	padding: 20px;
+	background: #ffffff;
+}
+
+.hiregistration{
+	
+	width: 100%;
+	height: 93vh; 
+	background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url(../img/registration.jpg)!important;
+	background-size:cover;
+}
+.navbar {
+  height: 60px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+  z-index: 1000; /* Ensures the navbar is above all other elements */
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-item .nav-link {
+  color: #fff;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: #ffeb3b; /* Highlight color */
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 18%;
+  background-color: #343a40;
+  color: white;
+  position: fixed;
+  top: 60px; /* Aligns under the fixed navbar */
+  left: 0;
+  height: calc(100vh - 60px); /* Full height minus navbar */
+  overflow-y: auto;
+  transition: transform 0.3s ease; /* Smooth transition for toggling */
+  transform: translateX(0); /* Default position */
+  padding-top: 20px;
+}
+
+.sidebar a {
+  display: block;
+  padding: 10px 25px;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.sidebar a:hover {
+  background-color: #495057;
+  color: #ffeb3b;
+}
+
+.sidebar .divider {
+  height: 1px;
+  background-color: #e2e2e2;
+  margin: 10px 0;
+}
+
+.sidebar .crossbtn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 25px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Sidebar Toggled State */
+.sidebar.closed {
+  transform: translateX(-100%); /* Hides the sidebar */
+}
+
+/* Content Styles */
+.content {
+  margin-left: 18%; /* Aligns content when the sidebar is visible */
+  padding: 20px;
+  transition: margin-left 0.3s ease; /* Smooth transition for margin */
+}
+
+.content.full-width {
+  margin-left: 0; /* Full width content when sidebar is hidden */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%; /* Sidebar takes full width on smaller screens */
+    height: 100%; /* Covers the entire screen */
+    top: 0;
+    z-index: 999; /* Brings sidebar above other elements */
+  }
+
+  .content {
+    margin-left: 0; /* Full width content for smaller screens */
+  }
+}
+
+.change{
+	
+	margin-top: -80px;
+	
+}
